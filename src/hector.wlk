@@ -21,5 +21,5 @@ object hector {
 			plantasCosechadas.add(planta)
 		})
 	}
-	method cantidadDePlantasCosechadas() {return plantasCosechadas.size()}
+	method cantidadDePlantasCosechadas() {return plantasCosechadas.size().toString()}
 }	

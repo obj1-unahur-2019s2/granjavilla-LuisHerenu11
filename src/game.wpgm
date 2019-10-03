@@ -22,8 +22,9 @@ program farmville {
  	keyboard.p().onPressDo({ 
  		game.say(hector,
  		"tengo cosechadas" + hector.cantidadDePlantasCosechadas() + "plantas"
- 		) 
- 		})
+ 		)
+ 		}) 
+ 		
  	
  	//  COMIENZA
 	game.start()
