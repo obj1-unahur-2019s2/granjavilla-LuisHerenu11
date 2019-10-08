@@ -2,12 +2,15 @@ import wollok.game.*
 import cultivos.*
 
 object hector {
-	var property position = new Position(x = 3, y = 3)
+	var property position = new Position(x = 3, y = 8)
 	var property image = "player.png"
 	var property plantasCosechadas = []
 	
 	method plantarMaiz(){
 		game.addVisual( new Maiz(position = self.position() ))
+	}
+	method plantarTrigo(){
+		game.addVisual( new Trigo(position = self.position() ))
 	}
 	method regarPlanta(){
 		// el colliders siempre devuelve una coleccion
