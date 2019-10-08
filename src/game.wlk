@@ -2,6 +2,7 @@ import hector.*
 import oso.*
 import cultivos.*
 import wollok.game.*
+import direcciones.*
 
 object juegoGranja {
 	var personaActual = hector	
@@ -49,6 +50,6 @@ object juegoGranja {
 		game.whenCollideDo(oso, { objeto => objeto.teChocoElOso() })
 	}
 	method configurarAcciones(){
-		game.onTick(1000,"movimientoOso",{oso.moverEnDireccion(dir)})
+		game.onTick(1000,"movimientoOso",{oso.moverEnDireccion(este)})
 	}
 }

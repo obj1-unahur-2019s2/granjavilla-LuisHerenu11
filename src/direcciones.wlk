@@ -1,10 +1,29 @@
+import wollok.game.*
 object este {
-	method siguientePosicion(posicion){
+	method siguientePosicion(pos){
 		if(pos.x() == game.width()-1){
-			return posicion
+			return pos
 		}
 		else {
-			return posicion.width()
+			return pos.right(1)
 		}
 	}
+}
+
+object oeste {
+	method siguientePosicion(pos){
+		if(pos.x() == 0) {
+			return pos.left(1)
+		}
+		else {
+			return pos.left(1)
+		}
+	}
+}
+object norte {
+	/* completar */
+}
+
+object sur {
+	/* completar */
 }

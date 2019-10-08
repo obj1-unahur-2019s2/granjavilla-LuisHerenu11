@@ -7,6 +7,6 @@ object oso {
 	
 	method moverEnDireccion(direccion)
 	{
-		self.position(direccion.siguientePosicion(self,position()))
+		self.position( direccion.siguientePosicion(self.position()))
 	}	
 }

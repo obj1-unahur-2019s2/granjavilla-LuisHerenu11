@@ -19,10 +19,14 @@ object hector {
 		game.colliders(self).forEach({ planta => planta.regate() })
 	}
 	method cosecharPlanta() {
-		game.colliders(self).forEach({planta => 
+		if (game.esCosechable())
+		{
+			game.colliders(self).forEach({planta => 
 			game.removeVisual(planta)
 			plantasCosechadas.add(planta)
-		})
+			})
+		}
+		
 	}
 	method cantidadDePlantasCosechadas() {return plantasCosechadas.size().toString()}
 }	

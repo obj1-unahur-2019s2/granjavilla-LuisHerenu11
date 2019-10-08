@@ -16,6 +16,9 @@ class Maiz {
 	method teChocoElOso() {
 		self.regate()
 	}
+	method esCosechable(){
+		return esAdulta
+	}
 }
 
 class Trigo {
@@ -24,7 +27,12 @@ class Trigo {
 	
 	method image() { return "wheat_0.png" }
 	method regate(){
-		if(evolucion < 3)
+		if (evolucion == 3)
+		{
+			evolucion = 0
+			return "wheat_0"	
+		}
+		else
 		{	
 			if(evolucion == 2)
 			{
@@ -36,10 +44,6 @@ class Trigo {
 				evolucion += 1
 				return "wheat_2.png"
 			}
-		}
-		else
-		{
-			return "no se puede cosechar"	
 		}	
 }
 	
@@ -50,5 +54,8 @@ La imagen cambia a wheat_x.png, donde la x corresponde a la etapa de evolución.
 		if (position.x() > 0) {
 			position = position.left(1)
 		}
+	}
+	method esCosechable(){
+		return evolucion >= 2	
 	}
 }
