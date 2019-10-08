@@ -48,4 +48,7 @@ object juegoGranja {
 	method configurarColisiones(){
 		game.whenCollideDo(oso, { objeto => objeto.teChocoElOso() })
 	}
+	method configurarAcciones(){
+		game.onTick(1000,"movimientoOso",{oso.moverEnDireccion(dir)})
+	}
 }

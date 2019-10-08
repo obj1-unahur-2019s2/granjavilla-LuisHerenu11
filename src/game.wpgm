@@ -2,6 +2,7 @@ import wollok.game.*
 import hector.*
 import cultivos.*
 import oso.*
+import game.*
 
 program farmville {
 	//  CONFIG	
