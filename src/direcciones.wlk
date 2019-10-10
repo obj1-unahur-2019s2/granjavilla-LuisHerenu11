@@ -12,18 +12,35 @@ object este {
 
 object oeste {
 	method siguientePosicion(pos){
-		if(pos.x() == 0) {
+		if(pos.x() > 0) {
 			return pos.left(1)
 		}
 		else {
-			return pos.left(1)
+			return pos
 		}
 	}
 }
 object norte {
-	/* completar */
+	method siguientePosicion(pos){
+		if(pos.y() == game.height()-1)
+		{
+		return pos.up(1)
+		}
+		else{
+		return pos
+		}
+	}
 }
 
 object sur {
-	/* completar */
+	method siguientePosicion(pos){
+		if(pos.y() > 0) {
+			return pos.down(1)
+		}
+		else{
+			return pos
+		}
+	}
 }
+
+// height = altura  ------- width = anchura
